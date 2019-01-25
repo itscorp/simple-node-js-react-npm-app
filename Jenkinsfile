@@ -8,7 +8,8 @@ pipeline {
 		stages {
 		  stage('Build') { 
 		  steps {
-		   sh 'sudo chown -R $USER:$(id -gn $USER) /.config'
+		   sh 'whoami'
+		   sh 'sudo chown -R root:root /.config'
 		   sh 'npm install' 
 		   } 
 		   } 
